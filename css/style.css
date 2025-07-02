@@ -1,0 +1,72 @@
+/* style.css - CheckMySet custom UI blend */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  background-color: #f3f4f6;
+}
+
+/* Background image overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/background2.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* control background transparency */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Textarea styling */
+textarea.form-control {
+  font-family: monospace;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  resize: vertical;
+}
+
+/* Button styling */
+button.btn {
+  transition: all 0.2s ease;
+}
+
+button.btn:hover {
+  transform: scale(1.02);
+}
+
+/* Bootstrap card overrides */
+.card {
+  border-radius: 1rem;
+}
+
+.info-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  perspective: 800px;
+}
+
+/* Optional extra glow/shadow when hovering */
+.info-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Add perspective to row container */
+.row.g-4 {
+  perspective: 1000px;
+}
+

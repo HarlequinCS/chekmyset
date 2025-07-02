@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap");
+
+@mixin mQ($rem) {
+  @media screen and (min-width: $rem) {
+    @content;
+  }
+}
+
+$position: -0.375rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul i {
+  color: #fff;
+  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+
+  &:hover {
+    color: #f2709c;
+  }
+}
+
+section {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  padding-block: min(20vh, 6rem);
+  text-align: center;
+  width: min(90rem, 90%);
+  margin-inline: auto;
+
+  span,
+  p,
+  h2,
+  h3 {
+    letter-spacing: 0.035rem;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #f2709c;
+  }
+
+  h2 {
+    font-size: clamp(3.5rem, 3rem + 1.6vw, 5rem);
+    margin-top: -0.625rem;
+    color: #ff6a00;
+    font-weight: 800;
+  }
+
+  p {
+    line-height: 1.6;
+    color: #0346fecc;
+    max-width: 50rem;
+    margin: 0 auto;
+    font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .cards {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    @include mQ(51rem) {
+      padding-bottom: 2.5rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+
+      img {
+        width: 100%;
+        height: 300px; // Adjust image size here if you want consistent layout
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: filter 0.4s ease;
+      }
+
+      &:hover img {
+        filter: grayscale(0%);
+      }
+
+      .card-info {
+        padding: 1.25rem 1.5rem;
+        text-align: left;
+
+        h3 {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 0.25rem;
+        }
+
+        .role {
+          font-size: 0.95rem;
+          color: #f2709c;
+          margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+          font-size: 0.85rem;
+          line-height: 1.5;
+
+          a {
+            display: block;
+            color: #555;
+            text-decoration: none;
+
+            &:hover {
+              color: #000;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

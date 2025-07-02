@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CheckMySet</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/team.css" />
+
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+
+<!-- Header / Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container py-2">
+
+    <!-- Brand + Slogan -->
+    <a class="navbar-brand d-flex align-items-baseline gap-2" href="#">
+      <h1 class="fw-bold text-primary mb-0" style="font-size: 2rem;">CheckMySet</h1>
+      <span class="text-secondary fw-semibold d-none d-md-inline" style="font-size: 0.95rem;">
+        Smart Way to Check Relations.
+      </span>
+    </a>
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Nav Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-dark" href="#learn">Learn</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#tutorial">Tutorial</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#tool">Tool</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#team">Team</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- LEARN SECTION -->
+<section id="learn" class="py-5 border-top" style="background-color: transparent;">
+  <div class="container text-center mb-5 px-3 px-md-5">
+    <h2 class="fw-bold" style="font-size: 2rem;">Understanding Relations</h2>
+    <p class="text-muted">Here’s how each property works, with simple examples.</p>
+  </div>
+
+  <div class="container px-3 px-md-5">
+    <div class="row g-4 justify-content-center">
+      
+      <div class="col-md-4">
+        <div class="info-card h-100">
+          <div class="text-center text-primary mb-3" style="font-size: 2.5rem;">🔁</div>
+          <h4 class="fw-bold text-primary mb-2">Reflexive</h4>
+          <p class="text-muted">A relation is reflexive if <strong>(a,a)</strong> exists for every element <em>a</em>.</p>
+          <p class="text-dark"><strong>Example:</strong> (1,1), (2,2), (3,3)</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card h-100">
+          <div class="text-center text-success mb-3" style="font-size: 2.5rem;">🔄</div>
+          <h4 class="fw-bold text-success mb-2">Symmetric</h4>
+          <p class="text-muted">A relation is symmetric if <strong>(a,b)</strong> implies <strong>(b,a)</strong> exists.</p>
+          <p class="text-dark"><strong>Example:</strong> (1,2), (2,1)</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card h-100">
+          <div class="text-center text-danger mb-3" style="font-size: 2.5rem;">➡️</div>
+          <h4 class="fw-bold text-danger mb-2">Transitive</h4>
+          <p class="text-muted">If <strong>(a,b)</strong> and <strong>(b,c)</strong> exist, then <strong>(a,c)</strong> must exist.</p>
+          <p class="text-dark"><strong>Example:</strong> (1,2), (2,3), (1,3)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TUTORIAL SECTION -->
+<section id="tutorial" class="py-5 border-top" style="background-color: transparent;">
+  <div class="container text-center mb-5 px-3 px-md-5">
+    <h2 class="fw-bold" style="font-size: 2rem;">Manual Closure Tutorial</h2>
+    <p class="text-muted">Learn how to compute each closure step-by-step.</p>
+  </div>
+
+  <div class="container px-3 px-md-5">
+    <div class="row g-4 justify-content-center" style="background-color: rgba(255,255,255,0.85); border-radius: 1rem; padding: 2rem 1rem;">
+      
+      <!-- Reflexive -->
+      <div class="col-md-4">
+        <div class="info-card p-4 rounded shadow-lg h-100">
+          <div class="text-center text-primary mb-3" style="font-size: 2.5rem;">1️⃣</div>
+          <h5 class="fw-bold text-primary mb-2">Reflexive Closure</h5>
+          <p class="text-muted mb-2">Check each element in the set. Make sure <strong>(a,a)</strong> exists for all <em>a</em>.</p>
+          <p class="text-dark"><strong>Example:</strong> A = {1,2,3} → Add (1,1), (2,2), (3,3)</p>
+        </div>
+      </div>
+
+      <!-- Symmetric -->
+      <div class="col-md-4">
+        <div class="info-card p-4 rounded shadow-lg h-100">
+          <div class="text-center text-success mb-3" style="font-size: 2.5rem;">2️⃣</div>
+          <h5 class="fw-bold text-success mb-2">Symmetric Closure</h5>
+          <p class="text-muted mb-2">For every <strong>(a,b)</strong>, check if <strong>(b,a)</strong> exists. If not, add it.</p>
+          <p class="text-dark"><strong>Example:</strong> (1,2) → Add (2,1)</p>
+        </div>
+      </div>
+
+      <!-- Transitive -->
+      <div class="col-md-4">
+        <div class="info-card p-4 rounded shadow-lg h-100">
+          <div class="text-center text-danger mb-3" style="font-size: 2.5rem;">3️⃣</div>
+          <h5 class="fw-bold text-danger mb-2">Transitive Closure</h5>
+          <p class="text-muted mb-2">If <strong>(a,b)</strong> and <strong>(b,c)</strong> exist, then <strong>(a,c)</strong> must be added.</p>
+          <p class="text-dark">Repeat until no new pairs can be added.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOOL SECTION -->
+ <div id="tool" class="container py-5" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 1rem;">
+  <div class="text-center mb-6">
+    <h1 class="text-4xl font-bold tracking-tight">Check<span class="text-blue-600">My</span>Set</h1>
+    <p class="text-lg text-gray-600">Smart Relation Property Checker</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Input Panel -->
+    <div class="col-md-6">
+      <div class="card shadow-sm rounded-lg">
+        <div class="card-body">
+          <h5 class="card-title">Enter Relation Set</h5>
+          <textarea id="relationInput" rows="6" class="form-control mb-3" placeholder="{(1,2), (2,3)}"></textarea>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary w-100" onclick="checkProperties()">Check Properties</button>
+            <button class="btn btn-outline-secondary w-100" onclick="generateClosures()">Generate Closures</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Output Panel -->
+    <div class="col-md-6">
+      <div class="bg-white p-4 rounded shadow-sm border">
+        <h5 class="fw-bold mb-3">Results</h5>
+        <div id="resultsOutput" class="space-y-2 text-base"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="team">
+  <span style="text-transform: uppercase; font-size: 1.5rem; color: #f2709c;">Meet Our</span>
+  <h2 style="font-size: 3rem; font-weight: 800; color: #ff6a00; margin-top: -0.5rem;">TEAM MEMBERS</h2>
+  <p style="color: #0346fecc; max-width: 600px; margin: 0 auto; font-family: 'Times New Roman', Times, serif; font-size: 1.5rem;">
+    This project is proudly built by passionate Computer Science students from UiTM Jasin, committed to simplifying discrete mathematics for all learners.
+  </p>
+
+  <div class="cards">
+    <!-- IQBAL -->
+    <div class="card">
+      <img src="assets/iqbal.jpg" alt="Iqbal">
+      <div class="card-info">
+        <h3>MUHAMMAD SAIFUL IQBAL ABDUL RANI</h3>
+        <div class="role">Project Manager</div>
+        <div class="role">BSc (Hons) Computer Science (Netcentric Computing)</div>
+        <div class="contact-info">
+          <a href="mailto:2025101407@student.uitm.edu.my">2025101407@student.uitm.edu.my</a>
+          <a href="mailto:saifuliqbal1254a@gmail.com">saifuliqbal1254a@gmail.com</a>
+          <a href="https://www.linkedin.com/in/saiful-iqbal12" target="_blank">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NISA -->
+    <div class="card">
+      <img src="assets/nisa.jpg" alt="Nisa">
+      <div class="card-info">
+        <h3>SITI ALYA HANISAH LATIF</h3>
+        <div class="role">Front-End Developer</div>
+        <div class="role">BSc (Hons) Computer Science (Netcentric Computing)</div>
+        <div class="contact-info">
+          <a href="mailto:2025142021@student.uitm.edu.my">2025142021@student.uitm.edu.my</a>
+          <a href="mailto:alyanisa773@gmail.com">alyanisa773@gmail.com</a>
+          <a href="www.linkedin.com/in/alya-hanisah-89ba43372" target="_blank">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- JANNAH -->
+    <div class="card">
+      <img src="assets/jannah.jpg" alt="Jannah">
+      <div class="card-info">
+        <h3>NURUL JANNAH IDRIS</h3>
+        <div class="role">UI/UX Designer</div>
+        <div class="role">BSc (Hons) Computer Science (Netcentric Computing)</div>
+        <div class="contact-info">
+          <a href="mailto:2025189817@student.uitm.edu.my">2025189817@student.uitm.edu.my</a>
+          <a href="mailto:jannahidris03@gmail.com">jannahidris03@gmail.com</a>
+          <a href="http://www.linkedin.com/in/nurul-jannah-idris03" target="_blank">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AIMAN -->
+    <div class="card">
+      <img src="assets/aiman.jpg" alt="aiman">
+      <div class="card-info">
+        <h3>MUHAMMAD AIMAN MOHD NAZRI</h3>
+        <div class="role">Back-End Developer</div>
+        <div class="role">BSc (Hons) Computer Science (Netcentric Computing)</div>
+        <div class="contact-info">
+          <a href="mailto:2025158881@student.uitm.edu.my">2025158881@student.uitm.edu.my</a>
+          <a href="mailto:aimansancho11@gmail.com">aimansancho11@gmail.com</a>
+          <a href="https://www.linkedin.com/in/aimannazri727" target="_blank">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="mt-5 text-center text-white" style="background-color: #1f2937;">
+  <div class="container py-4">
+    <p class="mb-1 fw-semibold mb-0" style="font-size: 0.95rem;">
+      &copy; 2025 <span class="text-blue-400">CheckMySet</span>. All rights reserved.
+    </p>
+    <p class="text-light mb-0" style="font-size: 0.85rem;">
+      This project is developed by UiTM Cawangan Melaka Kampus Jasin students under the course subject CSC510: Discrete Structure.
+    </p>
+  </div>
+</footer>
+
+<!-- Footer or last section above here -->
+
+<!-- Scripts -->
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom 3D card animation script -->
+<script>
+  document.querySelectorAll('.info-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -8;
+      const rotateY = ((x - centerX) / centerX) * 8;
+
+      card.style.transform = `scale(1.3) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'scale(1) rotateX(0deg) rotateY(0deg)';
+    });
+  });
+</script>
+</body>
+</html>
